@@ -31,10 +31,6 @@ def get_data() -> pd.DataFrame:
 # Create a VizzuChart object with the default height and width
 chart = VizzuChart()
 
-data = Data()
-data.add_data_frame(df: pd.Dataframe)
-chart.animate(data)
-
 @st.cache_data
 def get_age_hist(df: pd.DataFrame) -> alt.Chart:
     return _chart(
