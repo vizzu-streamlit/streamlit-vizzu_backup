@@ -32,7 +32,7 @@ def get_data() -> pd.DataFrame:
 chart = VizzuChart()
 
 data = Data()
-data.add_data_frame(df)
+data.add_data_frame(pd.Dataframe)
 chart.animate(data)
 
 @st.cache_data
