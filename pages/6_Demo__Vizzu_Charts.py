@@ -31,6 +31,7 @@ def get_data() -> pd.DataFrame:
 # Create a VizzuChart object with the default height and width
 chart = VizzuChart()
 
+
 @st.cache_data
 def get_age_hist(df: pd.DataFrame) -> alt.Chart:
     return _chart(
@@ -81,6 +82,7 @@ left.altair_chart(get_age_hist(edited_df), use_container_width=True)
 middle.altair_chart(get_gender_hist(edited_df), use_container_width=True)
 right.altair_chart(get_active_hist(edited_df), use_container_width=True)
 
+data = Data()
 data.add_data_frame(edited_df)
 chart.animate(data, Config({"x": "gender", "y": "count", "title": "Gender"}))
 	
